@@ -1,4 +1,4 @@
-package clases;
+package Componentes;
 
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
@@ -31,28 +31,41 @@ public class Ventana extends JFrame {
 		setDefaultCloseOperation(EXIT_ON_CLOSE); // Termina el programa al cerrar la ventana
 		setResizable(true);
 		setUndecorated(true);
+		
+		ImageIcon icono = new ImageIcon("recursos\\imagenes\\background/tgb1.png");
+		ImageIcon iconoSeleccionado = new ImageIcon("recursos\\imagenes\\background/tgb2.png");
+
 
 		// Agrega los componentes que desees mostrar dentro de la ventana
 
 		conversorMonedasPanel = new ConversorMonedasPanel();
 		conversorMasasPanel = new ConversorMasasPanel();
-		seleccionador = new JToggleButton();
+		seleccionador = new ToggleButton();
 
 		conversorMasasPanel.setBounds(0, 0, 466, 675);
 		conversorMonedasPanel.setBounds(0, 0, 466, 675);
-		seleccionador.setBounds(45, 5, 35, 30);
+		seleccionador.setBounds(5, 5, 60, 30);
+		
+		seleccionador.setIcon(icono);
+		seleccionador.setSelectedIcon(iconoSeleccionado);
+
 		seleccionador.addItemListener(new ItemListener() {
 
 			@Override
 			public void itemStateChanged(ItemEvent e) {
-				System.out.println("Removiendo");
 
 				if (seleccionador.isSelected()) {
 					remove(conversorMonedasPanel);
 					add(conversorMasasPanel);
+					
+				
+
 				} else {
 					remove(conversorMasasPanel);
 					add(conversorMonedasPanel);
+					
+				
+
 				}
 				repaint();
 			}
@@ -68,7 +81,6 @@ public class Ventana extends JFrame {
 	private void mostrarMonedas() {
 		try {
 			ListaMonedas.cargarMonedas();
-			
 
 		} catch (IOException e) {
 
@@ -76,7 +88,7 @@ public class Ventana extends JFrame {
 		ListaEquivalencias.cargarMasas();
 	}
 
-	JToggleButton seleccionador;
+	ToggleButton seleccionador;
 	JPanel conversorMonedasPanel;
 	JPanel conversorMasasPanel;
 

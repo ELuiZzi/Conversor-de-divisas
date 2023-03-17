@@ -1,6 +1,9 @@
 package ConverorMonedas.Clases;
 
 import java.io.*;
+
+import javax.swing.JOptionPane;
+
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -14,7 +17,7 @@ public class ListaMonedas {
 		OkHttpClient client = new OkHttpClient().newBuilder().build();
 
 		Request request = new Request.Builder().url("https://api.apilayer.com/currency_data/list")
-				.addHeader("apikey", "QbauOc7WIJNHa6Jfj74IGbXvmOYGBIoj").build();
+				.addHeader("apikey", "sYxJqm8A7hNbi9VfuNaFpGlVvLu0Y0OC").build();
 
 		Response response = client.newCall(request).execute();
 
@@ -24,13 +27,13 @@ public class ListaMonedas {
 		JsonObject jsonObject = gson.fromJson(listaMonedas, JsonObject.class);
 		JsonElement currencies = jsonObject.getAsJsonObject("currencies");
 
-		for (String abbreviation : ((JsonObject) currencies).keySet()) {
-			Moneda.addMoneda(abbreviation);
+		try {
+			for (String abbreviation : ((JsonObject) currencies).keySet()) {
+				Moneda.addMoneda(abbreviation);
+			}
+		} catch (NullPointerException ex) {
+			JOptionPane.showMessageDialog(null, "Error del servidor");
 		}
-	}
-
-	public static void main(String[] args) throws IOException {
-
 	}
 
 }

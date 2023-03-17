@@ -34,7 +34,7 @@ public class ConversorMasasPanel extends JPanel {
 
 		Image background = null;
 		try {
-			background = ImageIO.read(new File("recursos\\imagenes\\background/fondo1.png"));
+			background = ImageIO.read(new File("recursos\\imagenes\\background/fondo2.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			JOptionPane.showMessageDialog(null, "Error al cargar las imágenes");
@@ -49,7 +49,7 @@ public class ConversorMasasPanel extends JPanel {
 		cerrarBoton = new Etiqueta("cerr1");
 		minimizarBoton = new Etiqueta("min1");
 		cartel = new Etiqueta("tit1");
-		montoTitulo = new Etiqueta("mon1");
+		montoTitulo = new Etiqueta("mon4");
 		deTitulo = new Etiqueta("de1");
 		paraTitulo = new Etiqueta("par1");
 		desplegar1 = new Etiqueta("mas1");
@@ -58,8 +58,8 @@ public class ConversorMasasPanel extends JPanel {
 		convertirBoton = new Etiqueta("conv1");
 		restuladoTitulo = new Etiqueta("res1");
 
-		montoTextField = new MontoTextField();
-		resultadoTextField = new MontoTextField();
+		montoTextField = new MontoTextField("mon3");
+		resultadoTextField = new MontoTextField("mon3");
 
 		deComboBox = new ListaMonedasComboBox();
 		paraComboBox = new ListaMonedasComboBox();
@@ -72,7 +72,7 @@ public class ConversorMasasPanel extends JPanel {
 		cerrarBoton.setBounds(431, 5, 25, 25);
 		minimizarBoton.setBounds(401, 5, 25, 25);
 		cartel.setBounds((466 - 280) / 2, 0, 280, 100);
-		montoTitulo.setBounds((466 - 100) / 2, 120, 100, 22);
+		montoTitulo.setBounds((466 - 130) / 2, 120, 130, 22);
 		montoTextField.setBounds((466 - 200) / 2, 150, 200, 55);
 		deTitulo.setBounds(70, 234, 40, 20);
 		deComboBox.setBounds(70, 257, 250, 60);
@@ -335,7 +335,7 @@ public class ConversorMasasPanel extends JPanel {
 			deComboBox.addItem(lista);
 			paraComboBox.addItem(lista);
 		}
-
+		paraComboBox.setSelectedItem("Kilogramo");
 	}
 
 	private void mostarListado(JComboBox<String> box) {

@@ -61,8 +61,8 @@ public class ConversorMonedasPanel extends JPanel {
 		convertirBoton = new Etiqueta("conv1");
 		restuladoTitulo = new Etiqueta("res1");
 
-		montoTextField = new MontoTextField();
-		resultadoTextField = new MontoTextField();
+		montoTextField = new MontoTextField("mon2");
+		resultadoTextField = new MontoTextField("mon2");
 
 		deComboBox = new ListaMonedasComboBox();
 		paraComboBox = new ListaMonedasComboBox();
@@ -71,7 +71,7 @@ public class ConversorMonedasPanel extends JPanel {
 		Cursor mano = Cursor.getPredefinedCursor(Cursor.HAND_CURSOR);
 
 		// Posiciones 466,675
-		refresh.setBounds(5, 5, 30, 32);
+		refresh.setBounds(5, 40, 30, 32);
 		cerrarBoton.setBounds(431, 5, 25, 25);
 		minimizarBoton.setBounds(401, 5, 25, 25);
 		cartel.setBounds((466 - 280) / 2, 0, 280, 100);
@@ -373,6 +373,9 @@ public class ConversorMonedasPanel extends JPanel {
 			deComboBox.addItem(lista);
 			paraComboBox.addItem(lista);
 		}
+		
+		deComboBox.setSelectedItem("MXN");
+		paraComboBox.setSelectedItem("USD");
 
 	}
 

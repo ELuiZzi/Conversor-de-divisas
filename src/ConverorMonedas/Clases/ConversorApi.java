@@ -12,7 +12,7 @@ public class ConversorApi {
 		Request request = new Request.Builder()
 				.url("https://api.apilayer.com/currency_data/convert?to=" + to + "&from=" + from + "&amount=" + value
 						+ "")
-				.addHeader("apikey", "QbauOc7WIJNHa6Jfj74IGbXvmOYGBIoj")
+				.addHeader("apikey", "sYxJqm8A7hNbi9VfuNaFpGlVvLu0Y0OC")
 
 				.build();
 		Response response = client.newCall(request).execute();

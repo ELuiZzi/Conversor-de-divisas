@@ -5,9 +5,7 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.io.File;
 import java.io.IOException;
-
 import javax.imageio.ImageIO;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class Etiqueta extends JPanel {
@@ -23,6 +21,8 @@ public class Etiqueta extends JPanel {
 
 	public Etiqueta(String name) {
 		this.name = name;
+		setOpaque(true);
+		setBackground(new Color(0, 0, 0, 0));
 	}
 
 	protected void paintComponent(Graphics g) {
@@ -30,11 +30,13 @@ public class Etiqueta extends JPanel {
 			background = ImageIO.read(new File("recursos\\imagenes\\background/" + name + ".png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("Error al cargar imagen en Etiqueta");
+			
 		}
 		super.paintComponent(g);
 		g.drawImage(background, 0, 0, getWidth(), getHeight(), null);
-		setBackground(new Color(0, 0, 0, 0));
+		
+		
 	}
 
 	public void paintEntered(Graphics g, String imgName) {
@@ -46,7 +48,7 @@ public class Etiqueta extends JPanel {
 		}
 		super.paintComponent(g);
 		g.drawImage(background, getX(), getY(), getWidth(), getHeight(), null);
-		setBackground(new Color(0, 0, 0, 0));
+	
 
 	}
 
@@ -59,7 +61,7 @@ public class Etiqueta extends JPanel {
 		}
 		super.paintComponent(g);
 		g.drawImage(background, getX(), getY(), getWidth(), getHeight(), null);
-		setBackground(new Color(0, 0, 0, 0));
+	
 
 	}
 

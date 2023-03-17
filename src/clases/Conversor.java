@@ -1,5 +1,7 @@
 package clases;
 
+import Componentes.Ventana;
+
 public class Conversor {
 	static Ventana ventana;
 
