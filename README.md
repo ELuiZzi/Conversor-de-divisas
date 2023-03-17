@@ -33,5 +33,6 @@ Creditos a la Api 'Currency Data Api', que ayudó mucho en la parte del Converso
 
 [![Conversor.png](https://i.postimg.cc/FzVKMk6G/Conversor.png)](https://postimg.cc/kRD98Gqt)
 
-[Conversor de Divisas || Muestra](https://www.youtube.com/watch?v=1SQlzo8vY5I)
+[![Conversor de Divisas]([https://i.ytimg.com/vi/ABC123/mqdefault.jpg](https://i9.ytimg.com/vi/1SQlzo8vY5I/mqdefault.jpg?sqp=CMSU06AG-oaymwEmCMACELQB8quKqQMa8AEB-AHUBoAC4AOKAgwIABABGGUgVihSMA8=&rs=AOn4CLAmRi717VTDKv__kothjlF57ARfpg))](https://www.youtube.com/watch?v=1SQlzo8vY5I)
+
 
