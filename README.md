@@ -30,3 +30,5 @@ Creditos a la Api 'Currency Data Api', que ayudó mucho en la parte del Converso
 - Al Profesor Gustavo Polar Sanchez, al principio lo odie, pero lo termine amando, la forma en que enseña, me obligo a investigar de lo que estaba hablando y terminaba aprendiendo mucho más.
 
 - Finalmente, a Oracle, Compañeros y a la comunidad de Alura Latam, que nos dieron esta gran oportunidad, y nos apoyan mucho en Discord y en el Foro.
+
+[![Conversor.png](https://i.postimg.cc/FzVKMk6G/Conversor.png)](https://postimg.cc/kRD98Gqt)
